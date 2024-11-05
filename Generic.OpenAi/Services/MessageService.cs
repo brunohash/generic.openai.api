@@ -42,7 +42,8 @@ namespace Generic.OpenAi.Services
                         {
                             messageResponse = JsonSerializer.Deserialize<MessageContent>(jsonString);
 
-                            if(messageResponse != null && messageResponse.operatorInstruction.mensagem == "finalizar-pedido")
+                            // command 
+                            if(messageResponse != null && messageResponse.operatorInstruction.tag == "finalizar-pedido")
                             {
                                 await CallHandle();
                             }

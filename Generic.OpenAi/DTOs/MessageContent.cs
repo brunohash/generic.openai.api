@@ -14,6 +14,7 @@
     public class OperatorInstruction
     {
         public string? mensagem { get; set; }
+        public string? tag { get; set; }
     }
 }
 
